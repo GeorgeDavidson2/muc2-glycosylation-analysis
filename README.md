@@ -128,6 +128,16 @@ Three glycosylation states are compared across **~10,800 ns** of all-atom MD sim
 
 ---
 
+## Interpretation and reproducibility notes
+
+- The last-400-ns PCA overlay is disabled until both projection files are verified to use the same alignment, centering, and PCA basis. Variance plots do not establish a common basis.
+- Secondary-structure fractions are shown without independent-frame error bars. Estimate uncertainty from independent replicates or correlation-aware blocks before drawing statistical conclusions.
+- Hydrogen-bond occupancy inputs are assumed to contain fractions from 0 to 1. Verify the source file format before use. Per-frame standard deviations describe frame variability, not uncertainty in the mean.
+- The frame count, frame spacing, and duration for each replicate need confirmation against the original trajectory metadata.
+- Some notebooks use absolute paths or precomputed files. Full reproduction requires the source data and the commands used to generate those files.
+- The reference PMF notebook is a historical formula, not a validated free-energy estimate. Verify the corrected method, its normalization, units, and empty-bin treatment before interpreting it.
+- Biological interpretations below are hypotheses unless supported by independent evidence; the notebooks alone do not establish ligand response or bulk mucus mechanics.
+
 ## Key Findings
 
 <details>
